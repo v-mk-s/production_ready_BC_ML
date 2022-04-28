@@ -1,0 +1,20 @@
+defaults:
+  - _self_
+  - estimator: log-reg
+  - feature: no-pca
+  - override hydra/job_logging: dot-formatted
+
+dir_prefix: ../../..
+metrics_path: ${dir_prefix}/metrics/
+random_state: 100
+
+dataset:
+  download: True
+  source_url: https://archive.ics.uci.edu/ml/machine-learning-databases/breast-cancer-wisconsin/wdbc.data
+  dataset_dir: ${dir_prefix}/data/raw
+  dataset_filename: breast-cancer-dataset.csv
+  random_state: ${random_state}
+
+splitter:
+  validation: 0.2
+  random_state: ${random_state}
