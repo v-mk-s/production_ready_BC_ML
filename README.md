@@ -6,9 +6,9 @@
 
 The project structure is inspired (to a reasonable extent) by [datascience-cookiecutter template](https://drivendata.github.io/cookiecutter-data-science/). Some sections are not present, like references or sphinx build.
 
-For configuration management of the project, `hydra` framework is utilized ([hydra's docs](https://hydra.cc/)). This expierence was pretty nice for me, as I have never tickled with `yaml` files seriously (except for `docker-compose` ones).
+For configuration management of the project, `hydra` framework is used ([hydra's docs](https://hydra.cc/)). This experience was pretty nice for me, as I have never tickled with `yaml` files seriously (except for `docker-compose` ones).
 
-I do not perform much EDA in this section for a number of reasons: I have already worked with this dataset once, and that last time I implemented PCA to prove that the target variable (cancer type of the patient) was linearly separable. All the features are already denoised and distributed without outliers. This time I aimed to design a pipeline capable of multiple optional steps, that is why part for categorical features is present, yet there are no actual categorial features in the dataset.
+I performed EDA in this section for several reasons: I have already worked with this dataset once, and that last time I implemented PCA to prove that the target variable (cancer type of the patient) was linearly separable. All the features are already denoised and distributed without outliers. This time, I aimed to design a pipeline capable of multiple optional steps. That is why part of categorical features is present, yet there are no actual categorial features in the dataset.
 
 ## __Basic usage__
 
@@ -20,7 +20,7 @@ In directory `ml_project`, run the following command:
 
 After this, `outputs/` dir should be automatically created by hydra to manage runs.
 
-![outputs dir](./screenshots/outputs.jpg)
+![image](https://user-images.githubusercontent.com/32800793/165710427-ecea489c-6749-46a1-b608-bbcaffc1eff0.png)
 
 __Note__: due to relative pathing, the paths convention is `../../../desired-dir-name`.
 
@@ -46,4 +46,3 @@ In order to run all unit-tests, run the following command (see the example below
 
 `>>> python -m pytest`
 
-![running network-sensitive tests](./screenshots/network-testing.jpg)
